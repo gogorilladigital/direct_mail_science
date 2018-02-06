@@ -98,9 +98,9 @@
                                     <p class="cs">Case Study:</p>
                                     <p class="cl">Consumer Lending</p>
                                     <p class="bf">CAC Before:</p>
-                                    <p class="price">$9,800</p>
+                                    <p class="price">$1,392</p>
                                     <p class="bf">CAC After:</p>
-                                    <p class="price">$3,600</p>
+                                    <p class="price">$825</p>
                                 </div>
                             </div>
                         </div>
