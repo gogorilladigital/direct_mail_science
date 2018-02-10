@@ -1,6 +1,6 @@
 <?php
     if ($_POST['s-name'] === "" && $_POST['question-3'] !== "" && $_POST['question-4'] !== "" && $_POST['question-5'] !== "") {
-        $to = 'mgurule@gogorilladigital.com';
+        $to = 'crisjerden@gmail.com';
         $subject = 'Direct Mail Science Contact Email';
         $body = "<h1>New Direct Mail Science Contact Email</h1>";
         $body.="<br /><hr /><br /><br />";
@@ -11,7 +11,7 @@
         $body.="<th><strong>Prospect Email</strong></th><td>".$_POST['question-4']."</td>";
         $body.="<th><strong>Prospect Company</strong></th><td>".$_POST['question-5']."</td>";
         $body.="</table>";
-        $headers = 'From: DirectMailScience.com'."\r\n";
+        $headers = "From: " . 'DirectMailScience@directmailscience' . "\r\n";
         $headers .= 'Reply-To: mgurule@gogorilladigital.com'."\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1'."\r\n";
         mail($to, $subject, $body, $headers);
