@@ -21,7 +21,7 @@ if (isset($_POST['name']))  {
     "<h5>About Applicant</h5><p>".$about."</p>";
 
     //$to = 'crisjerden@gmail.com';
-    $to = 'jredd@jrdesignhero.com';
+    $to = 'mgurule@gogorilladigital.com';
 
     $subject = 'New Job Application';
 
