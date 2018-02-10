@@ -12,7 +12,7 @@
         $body.="<th><strong>Prospect Company</strong></th><td>".$_POST['question-5']."</td>";
         $body.="</table>";
         $headers = "From: " . 'DirectMailScience@directmailscience' . "\r\n";
-        $headers .= 'Reply-To: mgurule@gogorilladigital.com'."\r\n";
+        $headers .= 'Reply-To: crisjerden@gmail.com'."\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1'."\r\n";
         mail($to, $subject, $body, $headers);
         header("Location: contact-ty.php"); /* Redirect browser */
