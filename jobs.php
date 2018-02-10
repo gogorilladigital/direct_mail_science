@@ -1,3 +1,46 @@
+<?php
+if (
+    isset($_POST['name'])
+&& isset($_POST['phone'])
+&& isset($_POST['email'])
+&& isset($_POST['street'])
+&& isset($_POST['city'])
+&& isset($_POST['state'])
+&& isset($_POST['zip'])
+&& isset($_POST['about'])
+)  {
+    $fn = $_POST['name'];
+    $phone = $_POST['phone'];
+    $email = $_POST['email'];
+    $street = $_POST['street'];
+    $city = $_POST['city'];
+    $state = $_POST['state'];
+    $zip = $_POST['zip'];
+    $about = $_POST['about'];
+
+    $message = "<table>
+    <tr><th>Applicant Name</th><td>".$fn."</td></tr>
+    <tr><th>Phone</th><td>".$phone."</td></tr>
+    <tr><th>Email</th><td>".$email."</td></tr>
+    <tr><th>Street</th><td>".$street."</td></tr>
+    <tr><th>City</th><td>".$city."</td></tr>
+    <tr><th>State</th><td>".$state."</td></tr>
+    <tr><th>Zip</th><td>".$zip."</td></tr></table>".
+    "<h5>About Applicant</h5><p>".$about."</p>";
+
+    //$to = 'crisjerden@gmail.com';
+    $to = 'jredd@jrdesignhero.com';
+
+    $subject = 'New Job Application';
+
+    $headers = "From: " . 'hr@directmailscience.com' . "\r\n";
+    $headers .= "Reply-To: ". strip_tags($_POST['req-email']) . "\r\n";
+    $headers .= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+    mail($to, $subject, $message, $headers);
+    }
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -87,7 +130,7 @@
     <div class="jumbotron">
       <div class="container">
         <h1 class="display-3">We're Hiring!</h1>
-        <p>We're seeking a highly a motivated people with an entrepreneurial attitude, and relevant experience. Interested in earning extra cash in your spare time while working from the comfort of your own home?</p>
+        <p>We're seeking highly-motivated people with an entrepreneurial attitude. No experience needed. Interested in earning extra cash in your spare time while working from the comfort of your own home?</p>
       </div>
     </div>
 
@@ -95,6 +138,7 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-9">
+
           <h2 class="lab">Description</h2>
           <h2>Make $23.50 + hourly at home</h2>
 
@@ -144,29 +188,55 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <form method="POST" action="test.com">
+          <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
           <div class="modal-body">
               <div class="form-group">
                 <label for="name">Full Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your full name">
+                <input required type="text" class="form-control" id="name" placeholder="Enter your full name">
               </div>
               <div class="form-group">
                 <label for="phone">Contact Phone</label>
-                <input type="text" class="form-control" id="phone" placeholder="Enter your phone number">
+                <input required type="text" class="form-control" id="phone" placeholder="Enter your phone number">
               </div>
               <div class="form-group">
                 <label for="email">Contact Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your Email Address">
+                <input required type="email" class="form-control" id="email" placeholder="Enter your Email Address">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
               </div>
               <div class="form-group">
+                <label for="street">Street Address</label>
+                <input type="text" required class="form-control" id="street" placeholder="Enter your street address">
+              </div>
+              <div class="row">
+                  <div class="col">
+                      <div class="form-group">
+                      <label for="city">City</label>
+                      <input required type="text" class="form-control" id="city">
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="form-group">
+                      <label for="state">State</label>
+                      <input required type="text" class="form-control" id="state">
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="form-group">
+                      <label for="zip">Zip</label>
+                      <input required type="text" class="form-control" id="zip">
+                      </div>
+                  </div>
+              </div>
+              <div class="form-group">
                 <label for="background">Tell us about yourself</label>
-                <textarea class="form-control" id="background"></textarea>
+                <textarea required class="form-control" id="background"></textarea>
               </div>
           </div>
           <div class="modal-footer">
-            <button type="submit" class="btn btn-primary btn-block">Send Application</button>
+            <button type="submit" style="display: block" class="btn btn-primary btn-block">Send Application</button>
           </div>
+          <p style="padding: 10px 15px;text-align: center;font-size: 11px">By submitting this form, I opt-in to receive advertised offers by postal mail, email or text.</p>
+
           </form>
         </div>
       </div>
