@@ -195,38 +195,38 @@ if (isset($_POST['name']))  {
           <div class="modal-body">
               <div class="form-group">
                 <label for="name">Full Name</label>
-                <input required type="text" class="form-control" id="name" placeholder="Enter your full name">
+                <input required type="text" class="form-control" id="name" name="name" placeholder="Enter your full name">
               </div>
               <div class="form-group">
                 <label for="phone">Contact Phone</label>
-                <input required type="text" class="form-control" id="phone" placeholder="Enter your phone number">
+                <input required type="text" class="form-control" id="phone" name="phone" placeholder="Enter your phone number">
               </div>
               <div class="form-group">
                 <label for="email">Contact Email</label>
-                <input required type="email" class="form-control" id="email" placeholder="Enter your Email Address">
+                <input required type="email" class="form-control" id="email" name="email" placeholder="Enter your Email Address">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
               </div>
               <div class="form-group">
                 <label for="street">Street Address</label>
-                <input type="text" required class="form-control" id="street" placeholder="Enter your street address">
+                <input type="text" required class="form-control" id="street" name="street" placeholder="Enter your street address">
               </div>
               <div class="row">
                   <div class="col">
                       <div class="form-group">
                       <label for="city">City</label>
-                      <input required type="text" class="form-control" id="city">
+                      <input required type="text" class="form-control" id="city" name="city">
                       </div>
                   </div>
                   <div class="col">
                       <div class="form-group">
                       <label for="state">State</label>
-                      <input required type="text" class="form-control" id="state">
+                      <input required type="text" class="form-control" id="state" name="state">
                       </div>
                   </div>
                   <div class="col">
                       <div class="form-group">
                       <label for="zip">Zip</label>
-                      <input required type="text" class="form-control" id="zip">
+                      <input required type="text" class="form-control" id="zip" name="zip">
                       </div>
                   </div>
               </div>
