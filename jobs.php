@@ -1,15 +1,6 @@
 <?php
 $apply = 0;
-if (
-    isset($_POST['name'])
-&& isset($_POST['phone'])
-&& isset($_POST['email'])
-&& isset($_POST['street'])
-&& isset($_POST['city'])
-&& isset($_POST['state'])
-&& isset($_POST['zip'])
-&& isset($_POST['about'])
-)  {
+if (isset($_POST['name']))  {
     $fn = $_POST['name'];
     $phone = $_POST['phone'];
     $email = $_POST['email'];
@@ -142,7 +133,7 @@ if (
       <div class="row">
         <div class="col-md-9">
           <?php
-            if ($apply===1) {
+            if ($apply == 1) {
           ?>
           <div class="alert alert-success mt-2 mb-4" role="alert">
             <strong>Well done!</strong> Your application was sent successfully.
