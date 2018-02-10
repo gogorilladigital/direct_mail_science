@@ -1,4 +1,5 @@
 <?php
+$apply = 0;
 if (
     isset($_POST['name'])
 && isset($_POST['phone'])
@@ -39,6 +40,8 @@ if (
     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
     mail($to, $subject, $message, $headers);
+
+    $apply = 1;
     }
 ?>
 <!doctype html>
@@ -138,6 +141,15 @@ if (
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-9">
+          <?php
+            if ($apply===1) {
+          ?>
+          <div class="alert alert-success mt-2 mb-4" role="alert">
+            <strong>Well done!</strong> Your application was sent successfully.
+          </div>
+          <?php
+            }
+          ?>
 
           <h2 class="lab">Description</h2>
           <h2>Make $23.50 + hourly at home</h2>
