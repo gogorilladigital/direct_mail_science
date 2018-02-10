@@ -21,11 +21,11 @@ if (isset($_POST['name']))  {
     "<h5>About Applicant</h5><p>".$about."</p>";
 
     //$to = 'crisjerden@gmail.com';
-    $to = 'jredd@jrdesignhero.com';
+    $to = 'mgurule@gogorilladigital.com';
 
     $subject = 'New Job Application';
 
-    $headers = "From: " . 'cjerden@directmailscience.com' . "\r\n";
+    $headers = "From: " . 'Applications Service' . "\r\n";
     $headers .= "Reply-To: ". strip_tags($_POST['req-email']) . "\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
