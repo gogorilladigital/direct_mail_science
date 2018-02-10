@@ -21,7 +21,7 @@ if (isset($_POST['name']))  {
     "<h5>About Applicant</h5><p>".$about."</p>";
 
     //$to = 'crisjerden@gmail.com';
-    $to = 'mgurule@gogorilladigital.com';
+    $to = 'jredd@jrdesignhero.com';
 
     $subject = 'New Job Application';
 
@@ -31,7 +31,6 @@ if (isset($_POST['name']))  {
     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
     mail($to, $subject, $message, $headers);
-    echo 'works';
     $apply = 1;
     }
 ?>
